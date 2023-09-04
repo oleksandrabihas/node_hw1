@@ -2,7 +2,6 @@ const contacts = require("./contacts.js");
 
 const { Command } = require("commander");
 const program = new Command();
-console.log(program)
 program
   .option("-a, --action <type>", "choose action")
   .option("-i, --id <type>", "user id")
@@ -41,5 +40,4 @@ async function invokeAction({ action, id, name, email, phone }) {
   }
 }
 
-console.log(argv);
 invokeAction(argv);
